@@ -1,16 +1,15 @@
 # Makefile
 
-# Définition des cibles
-UNIT_TESTS = run-unit-tests
-INTEGRATION_TESTS = run-integration-tests
-
 # Cibles par défaut
-all: $(UNIT_TESTS) $(INTEGRATION_TESTS)
+all: test
+
+# Cible pour exécuter les tests
+test: unit-test integration-test
 
 # Cible pour exécuter les tests unitaires
-$(UNIT_TESTS):
+unit-test:
     mvn test
 
 # Cible pour exécuter les tests d'intégration
-$(INTEGRATION_TESTS):
+integration-test:
     mvn verify
