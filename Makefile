@@ -8,8 +8,8 @@ test: unit-test integration-test
 
 # Cible pour exécuter les tests unitaires
 unit-test:
-	@mvn test
+    /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin/mvn test
 
 # Cible pour exécuter les tests d'intégration
 integration-test:
-	@mvn verify
+    /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin/mvn verify
